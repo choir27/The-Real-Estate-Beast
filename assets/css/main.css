@@ -3700,8 +3700,8 @@ div#bar.bar{
 
 div#bar.bar a{
 	font-size: 2rem;
-	margin-bottom: 0rem;
-	margin-top: .5rem;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
 }
 
 header#header{
