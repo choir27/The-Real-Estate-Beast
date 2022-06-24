@@ -3678,8 +3678,9 @@ display: flex;
 width: 20%;
 }
 
-#bar{
+div#bar{
 	height: 5%;
+	padding: 2rem 1rem;
 	margin-top: 16rem;
 }
 
