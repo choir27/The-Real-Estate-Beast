@@ -3652,15 +3652,16 @@ input, select, textarea {
 /* Landscape
 /*******************************************/
 
-@media (min-width:100px) and (max-width:1000px)	{
+@media (min-width:100px) and (max-width:1200px)	{
 	div#bar{
 		background: none;
 		height: 100%;
-		margin-top: 2rem;
+
 	}
 	
 	div#bar.bar a{
 		font-size: 3.5rem;
+		width: 30%;
 		margin-bottom: 4.5rem;
 	}
 }
@@ -3673,7 +3674,7 @@ width: 120%;
 height: 66vh;
 }
 header#header{
-	height: 50vh;
+	height: 70vh;
 	position: relative;
 }
 
@@ -3701,7 +3702,7 @@ div#bar.bar{
 	margin-bottom: 0.5rem;
 }
 
-#header{
+header#header{
 	height: 110vh;
 
 }
