@@ -3690,7 +3690,7 @@ width: 20%;
 div#bar.bar{
 	background: none;
 	padding: 0rem;
-	height: 3%;
+	height: 50%;
 	margin-top: 11rem;
 	position: fixed;
 	z-index: 1;
@@ -3698,7 +3698,7 @@ div#bar.bar{
 
 div#bar.bar a{
 	width: 5%;
-	font-size: 1rem;
+	font-size: 2rem;
 	margin-bottom: 0.5rem;
 }
 
