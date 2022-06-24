@@ -3661,13 +3661,13 @@ width: 20%;
 	margin-top: 6rem;
 }
 
-#bar a{
-	margin-right: 1rem;
-	font-size: 1.2rem;
+#bar.bar a{
+	margin-right: 0rem;
+	font-size: 0.5rem;
 }
 
 #header.videoHeader{
-	height: 50vh;
+	height: 90vh;
 
 }
 }
