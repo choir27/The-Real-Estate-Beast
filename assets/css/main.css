@@ -3652,20 +3652,6 @@ input, select, textarea {
 /* Landscape
 /*******************************************/
 
-@media (min-width:100px) and (max-width:1200px)	{
-	div#bar{
-		background: none;
-		height: 100%;
-
-	}
-	
-	div#bar.bar a{
-		font-size: 3.5rem;
-		width: 30%;
-		margin-bottom: 4.5rem;
-	}
-}
-
 
 
 @media all and (orientation: landscape) and (min-width:100px) and (max-width:1000px)	{
@@ -3694,7 +3680,7 @@ div#bar.bar{
 	margin-top: 2rem;
 	position: fixed;
 	z-index: 1;
-	margin-bottom: 11.6rem;
+	margin-bottom: 11.8rem;
 	margin-right: 1rem;
 }
 
@@ -3709,4 +3695,25 @@ header#header{
 
 }
 }
+
+
+@media (min-width:100px) and (max-width:1200px)	{
+	div#bar{
+		background: none;
+		height: 100%;
+
+	}
+
+	body header#header{
+		height:60vh;
+	
+	}
+	
+	div#bar.bar a{
+		font-size: 3.5rem;
+		width: 30%;
+		margin-bottom: 4.5rem;
+	}
+}
+
 
