@@ -3695,11 +3695,13 @@ div#bar.bar{
 	position: fixed;
 	z-index: 1;
 	margin-bottom: 8.5rem;
-
+	margin-right: 1rem;
 }
 
 div#bar.bar a{
 	font-size: 2rem;
+	margin-bottom: 0rem;
+	margin-top: .5rem;
 }
 
 header#header{
