@@ -3255,7 +3255,6 @@ input, select, textarea {
 /******************************************
 /* Video
 /*******************************************/
-	
 
 	.video{
 		width: 30%;
@@ -3271,7 +3270,7 @@ input, select, textarea {
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		width: 60%;
+		width: 100%;
 		height: 400px;
 	}
 
@@ -3422,6 +3421,17 @@ input, select, textarea {
 		margin-bottom: 1rem;
 	}
 
+	.source{
+		width: 100%;
+	} 
+
+	#videos a,	.videoRow a{
+		border-bottom: none;
+		text-decoration: none;
+		width: 100%;
+	}
+
+
 /******************************************
 /* Listings
 /*******************************************/
@@ -3496,6 +3506,10 @@ input, select, textarea {
 .sendMessage{
 	margin-top: 1.5rem;
 }
+
+#videos img.source{
+	min-width: 100%;
+}
 /******************************************
 /* Media Queries
 /*******************************************/
@@ -3517,13 +3531,20 @@ input, select, textarea {
 		width: 100%;
 		height: 60%;
 	}
-	
+
 }
 
 @media all and (min-width: 1205px) and (max-width: 1445px) {
 
+	#videos a{
+		width: 100%;
+	}
+	#videos a img{
+		min-width: 100%;
+		height: 32vh;
+	}
 	#videos{
-		width: 40%;
+		width: 100%;
 	}
 	#header h1{
 		font-size: 1.2rem;
@@ -3534,12 +3555,11 @@ input, select, textarea {
 
 @media all and (min-width: 700px) and (max-width: 1205px) {
 
-	#videos{
-		width: 45%;
+	#videos a img{
+		width: 100%;
+		height: 32vh;
 	}
-	#leftArrow, #rightArrow{
-		width: 35%;
-	}
+ 
 	#header h1{
 		font-size: 1.2rem;
 		margin-bottom: 1rem;
@@ -3547,7 +3567,7 @@ input, select, textarea {
 }
 
 
-@media all and (min-width: 200px) and (max-width: 737px) {
+@media all and (min-width: 200px) and (max-width: 953px) {
 	#leftArrow,#rightArrow{
 		display: none;
 	}
@@ -3560,9 +3580,13 @@ input, select, textarea {
 		display: flex;	
 		width: 25%;
 	}
-	#videos{
-		width: 45%;
-		height: 70%;
+	#videos a img{
+		width: 100%;
+		height: 32vh;
+	}
+
+	#videos a{
+		margin-right: 4rem;
 	}
 	#leftArrow, #rightArrow{
 		width: 35%;
@@ -3575,7 +3599,7 @@ input, select, textarea {
 		flex-direction: column;
 		width: 40%;
 	}
-	section.flex.column video{
+	section.flex.column a{
 		width: 80%;
 	}
 	.videoRow{
@@ -3587,11 +3611,87 @@ input, select, textarea {
 }
 
 
+@media all and (min-width: 200px) and (max-width: 1118px) {
+	#videos a img{
+		width: 130%;
+	}
+
+}
+
+@media all and (min-width: 200px) and (max-width: 725px) {
+	#videos a img{
+		width: 190%;
+	}
+
+	#videos a{
+		margin-right: 5rem;
+	}
+}
+
+@media all and (min-width: 200px) and (max-width: 700px) {
+	#videos a img{
+		width: 200%;
+	}
+}
+
+@media all and (min-width: 200px) and (max-width: 595px) {
+	#videos a img{
+		width: 230%;
+	}
+
+}
+
+
+@media all and (min-width: 200px) and (max-width: 555px) {
+	#videos a img{
+		width: 250%;
+	}
+
+}
+
+@media all and (min-width: 200px) and (max-width: 534px) {
+	#videos a img{
+		width: 320%;
+	}
+	#videos{
+		margin-right: 4rem;
+	}
+}
+
+@media all and (min-width: 200px) and (max-width: 507px) {
+	#videos a img{
+		width: 380%;
+	}
+	#videos{
+		margin-right: 4rem;
+	}
+}
+
+@media all and (min-width: 200px) and (max-width: 471px) {
+	#videos a img{
+		min-width: 470%;
+	}
+	#videos{
+		margin-right: 4rem;
+	}
+}
+
+@media all and (min-width: 200px) and (max-width: 478px) {
+	div#videos{
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	margin-right: 0rem;
+	}
+
+	#videos a img{
+		width: 100%;
+	}
+
+}
 /******************************************
 /* Landscape
 /*******************************************/
 
 
-@media (orientation: landscape) {
-  }
-  
