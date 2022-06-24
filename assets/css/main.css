@@ -3644,21 +3644,22 @@ input, select, textarea {
 
 
 @media (orientation: landscape) {
-#videos img{
-width: 50%;
+#videos a img{
+width: 30%;
 }
 
 .leftArrow,.rightArrow{
 display: flex;
+width: 20%;
 }
 
 #bar{
-	height:40%;
-	width: 20%;
+	height:10%;
 	margin-bottom: 2.5rem;
 }
 
 .videoHeader{
-	height: 42vh;
+	padding-bottom: 10rem;
+	
 }
 }
