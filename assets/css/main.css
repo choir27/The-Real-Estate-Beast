@@ -3643,3 +3643,22 @@ input, select, textarea {
 /*******************************************/
 
 
+@media (orientation: landscape) {
+#videos img{
+width: 50%;
+}
+
+.leftArrow,.rightArrow{
+display: flex;
+}
+
+#bar{
+	height:40%;
+	width: 20%;
+	margin-bottom: 2.5rem;
+}
+
+.videoHeader{
+	height: 42vh;
+}
+}
