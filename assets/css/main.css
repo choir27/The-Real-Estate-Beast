@@ -3694,13 +3694,13 @@ div#bar.bar{
 	margin-top: 2rem;
 	position: fixed;
 	z-index: 1;
-	margin-bottom: 8.5rem;
+	margin-bottom: 10rem;
 	margin-right: 1rem;
 }
 
 div#bar.bar a{
 	font-size: 2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1.4rem;
 	margin-top: 1rem;
 }
 
