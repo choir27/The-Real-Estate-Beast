@@ -3696,9 +3696,9 @@ div#bar.bar{
 	z-index: 1;
 }
 
-#bar.bar a{
+div#bar.bar a{
 	width: 5%;
-	font-size: .5rem;
+	font-size: 1rem;
 	margin-bottom: 0.5rem;
 }
 
