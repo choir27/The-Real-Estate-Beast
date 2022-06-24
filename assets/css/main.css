@@ -3686,7 +3686,7 @@ display: flex;
 width: 20%;
 }
 
-div#bar{
+div#bar.bar{
 	background: none;
 	padding: 0rem;
 	height: 5%;
