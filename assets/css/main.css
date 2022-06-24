@@ -3691,14 +3691,15 @@ div#bar.bar{
 	background: none;
 	padding: 0rem;
 	height: 100%;
-	margin-top: 11rem;
+	margin-top: 2rem;
 	position: fixed;
 	z-index: 1;
+	margin-bottom: 8.5rem;
+
 }
 
 div#bar.bar a{
 	font-size: 2rem;
-	margin-bottom: 8.5rem;
 }
 
 header#header{
