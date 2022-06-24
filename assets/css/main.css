@@ -3643,7 +3643,7 @@ input, select, textarea {
 /*******************************************/
 
 
-@media (orientation:landscape) and (max-width: 767px){
+@media (orientation:landscape) and (min-width: 200px) and  (max-width: 767px){
 #videos a img{
 width: 120%;
 height: 66vh;
