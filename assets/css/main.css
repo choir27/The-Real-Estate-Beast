@@ -3648,6 +3648,21 @@ input, select, textarea {
 /* Landscape
 /*******************************************/
 
+@media (min-width:100px) and (max-width:1000px)	{
+	div#bar{
+		padding: 1rem;
+		height: 100%;
+		margin-top: 2rem;
+	}
+	
+	div#bar.bar a{
+		font-size: 3.5rem;
+		margin-bottom: 4.5rem;
+	}
+}
+
+
+
 @media all and (orientation: landscape) and (min-width:100px) and (max-width:1000px)	{
 #videos a img{
 width: 120%;
@@ -3664,14 +3679,12 @@ width: 20%;
 }
 
 #bar{
-	margin-right: 0.8rem;
 	height: 5%;
 	margin-top: 16rem;
 }
 
 #bar.bar a{
 	width: 5%;
-	margin-right: -18rem;
 	font-size: 1.5rem;
 	margin-bottom: 0.5rem;
 }
