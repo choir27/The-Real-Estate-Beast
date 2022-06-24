@@ -3646,6 +3646,7 @@ input, select, textarea {
 @media (orientation: landscape) {
 #videos a img{
 width: 120%;
+height: 16vh;
 }
 
 .arrows{
@@ -3662,12 +3663,13 @@ width: 20%;
 }
 
 #bar.bar a{
-	margin-right: 0rem;
-	font-size: 0.5rem;
+	width: 20%;
+	margin-right: -1rem;
+	font-size: 1.5rem;
 }
 
-#header.videoHeader{
-	height: 90vh;
+#header{
+	height: 110vh;
 
 }
 }
