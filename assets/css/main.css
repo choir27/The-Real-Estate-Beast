@@ -3510,9 +3510,13 @@ input, select, textarea {
 #videos img.source{
 	min-width: 100%;
 }
+
+
 /******************************************
 /* Media Queries
 /*******************************************/
+
+
 
 @media all and (max-width: 980px) {
 	#header{
@@ -3568,18 +3572,24 @@ input, select, textarea {
 
 
 @media all and (min-width: 200px) and (max-width: 953px) {
-	#leftArrow,#rightArrow{
-		display: none;
-	}
+
+#section3{
+	margin-top: -52rem;
+}
+#section4{
+	margin-top: -32rem;
+}
+
 	div.arrows{
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
 	}
-	.rightArrow,.leftArrow{
-		display: flex;	
-		width: 25%;
+
+	#leftArrow,#rightArrow{
+		display: none;
 	}
+
 	#videos a img{
 		width: 100%;
 		height: 32vh;
@@ -3588,9 +3598,7 @@ input, select, textarea {
 	#videos a{
 		margin-right: 4rem;
 	}
-	#leftArrow, #rightArrow{
-		width: 35%;
-	}
+
 	#header h1{
 		font-size: 1.2rem;
 		margin-bottom: 1rem;
@@ -3608,75 +3616,15 @@ input, select, textarea {
 		justify-content: space-around;
 	}
 
-}
-
-
-@media all and (min-width: 200px) and (max-width: 1118px) {
-	#videos a img{
-		width: 130%;
-	}
-
-}
-
-@media all and (min-width: 200px) and (max-width: 725px) {
-	#videos a img{
-		width: 190%;
-	}
-
-	#videos a{
-		margin-right: 5rem;
-	}
-}
-
-@media all and (min-width: 200px) and (max-width: 700px) {
-	#videos a img{
-		width: 200%;
-	}
-}
-
-@media all and (min-width: 200px) and (max-width: 595px) {
-	#videos a img{
-		width: 230%;
+	section.flex.column div.videoRow{
+		margin-right: 2rem;
 	}
 
 }
 
 
-@media all and (min-width: 200px) and (max-width: 555px) {
-	#videos a img{
-		width: 250%;
-	}
 
-}
-
-@media all and (min-width: 200px) and (max-width: 534px) {
-	#videos a img{
-		width: 320%;
-	}
-	#videos{
-		margin-right: 4rem;
-	}
-}
-
-@media all and (min-width: 200px) and (max-width: 507px) {
-	#videos a img{
-		width: 380%;
-	}
-	#videos{
-		margin-right: 4rem;
-	}
-}
-
-@media all and (min-width: 200px) and (max-width: 471px) {
-	#videos a img{
-		min-width: 470%;
-	}
-	#videos{
-		margin-right: 4rem;
-	}
-}
-
-@media all and (min-width: 200px) and (max-width: 478px) {
+@media all and (min-width: 200px) and (max-width: 784px) {
 	div#videos{
 	flex-direction: column;
 	align-items: center;
