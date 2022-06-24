@@ -3648,7 +3648,7 @@ input, select, textarea {
 /* Landscape
 /*******************************************/
 
-@media (orientation:landscape){
+@media all and (orientation: landscape)	{
 #videos a img{
 width: 120%;
 height: 66vh;
