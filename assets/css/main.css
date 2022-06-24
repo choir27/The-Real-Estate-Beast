@@ -3690,15 +3690,15 @@ width: 20%;
 div#bar.bar{
 	background: none;
 	padding: 0rem;
-	height: 5%;
-	margin-top: 16rem;
+	height: 3%;
+	margin-top: 11rem;
 	position: fixed;
 	z-index: 1;
 }
 
 #bar.bar a{
 	width: 5%;
-	font-size: .8rem;
+	font-size: .5rem;
 	margin-bottom: 0.5rem;
 }
 
