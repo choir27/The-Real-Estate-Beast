@@ -3511,12 +3511,17 @@ input, select, textarea {
 	min-width: 100%;
 }
 
+#bar{
+	background: white;
+	padding: 1rem;
+	margin-right: 0rem;
+}
 
 /******************************************
 /* Media Queries
 /*******************************************/
 
-
+	
 
 @media all and (max-width: 980px) {
 	#header{
@@ -3638,12 +3643,12 @@ input, select, textarea {
 	}
 
 }
+}
 /******************************************
 /* Landscape
 /*******************************************/
 
-
-@media (orientation:landscape) and (min-width: 200px) and  (max-width: 767px){
+@media (orientation:landscape){
 #videos a img{
 width: 120%;
 height: 66vh;
