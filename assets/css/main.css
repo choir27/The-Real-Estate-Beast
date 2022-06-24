@@ -3563,6 +3563,10 @@ input, select, textarea {
 
 
 @media all and (min-width: 700px) and (max-width: 1205px) {
+	div#bar.bar{
+		background: white;
+		padding: 2rem;
+	}
 
 	#videos a img{
 		width: 100%;
@@ -3650,7 +3654,7 @@ input, select, textarea {
 
 @media (min-width:100px) and (max-width:1000px)	{
 	div#bar{
-		padding: 1rem;
+		background: none;
 		height: 100%;
 		margin-top: 2rem;
 	}
@@ -3668,6 +3672,10 @@ input, select, textarea {
 width: 120%;
 height: 66vh;
 }
+header#header{
+	height: 50vh;
+	position: relative;
+}
 
 .arrows{
 	margin-top: -4rem;
@@ -3679,9 +3687,12 @@ width: 20%;
 }
 
 div#bar{
+	background: none;
+	padding: 0rem;
 	height: 5%;
-	padding: 2rem 1rem;
 	margin-top: 16rem;
+	position: fixed;
+	z-index: 1;
 }
 
 #bar.bar a{
