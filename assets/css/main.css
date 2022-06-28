@@ -3728,7 +3728,7 @@ div#bar.bar{
 .video button{
 	position: absolute;
 	background-color: #555;
-	padding: .6rem;
+	padding: .6rem .9rem;
 	border: none;
 	cursor: pointer;
 	border-radius: 5px;
