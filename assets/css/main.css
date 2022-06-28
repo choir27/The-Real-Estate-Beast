@@ -3665,11 +3665,30 @@ div#bar.bar{
 }
 
 
-@media all and (min-width:100px) and (max-width:680px)	{
+@media all and (min-width:500px) and (max-width:680px)	{
 	#videos a img{
 		height: 50vh;
 	}
  }
+
+ @media all and (min-width:430px) and (max-width:500px)	{
+	body #main #two div#videos a img{
+		height: 45vh;
+	}
+ }
+
+ @media all and (min-width:330px) and (max-width:430px)	{
+	body #main #two div#videos a img{
+		height: 35vh;
+	}
+ }
+
+ @media all and (min-width:200px) and (max-width:330px)	{
+	body #main #two div#videos a img{
+		height: 25vh;
+	}
+ }
+
 
 .icons{
 	justify-content: space-around;
