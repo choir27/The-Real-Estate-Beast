@@ -255,44 +255,4 @@ function hideButton(){
 
 }
 
-// if (/mobile/i.test(navigator.userAgent)) {...}
-// 	#videos a img{
-// 		width: 120%;
-// 		height: 66vh;
-// 		}
-// 		header#header{
-// 			height: 70vh;
-// 			position: relative;
-// 		}
-		
-// 		.arrows{
-// 			margin-top: -4rem;
-// 		}
-		
-// 		.leftArrow,.rightArrow{
-// 		display: flex;
-// 		width: 20%;
-// 		}
-		
-// 		div#bar.bar{
-// 			background: none;
-// 			padding: 0rem;
-// 			height: 100%;
-// 			margin-top: 2rem;
-// 			position: fixed;
-// 			z-index: 1;
-// 			margin-bottom: 11.6rem;
-// 			margin-right: 1rem;
-// 		}
-		
-// 		div#bar.bar a{
-// 			font-size: 2.2rem;
-// 			margin-bottom: 1.4rem;
-// 			margin-top: 1rem;
-// 		}
-		
-// 		header#header{
-// 			height: 110vh;
-		
-// 		}
-//   }
+
