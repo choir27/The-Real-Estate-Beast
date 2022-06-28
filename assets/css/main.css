@@ -3535,7 +3535,7 @@ input, select, textarea {
 #videos #leftArrow,#videos #rightArrow{
 	display: none;
  }
-
+ }
 
 @media all and (min-width: 300px) and (max-width: 740px) {
 	header#header{
@@ -3694,27 +3694,13 @@ div#bar.bar{
 	color: white;
 }
 
-
-
-.video button{
-	display: none;
-}
-
-
 .video button:hover{
 	background-color: black;
 }
 
 
 
-.video button::before{
-	position: absolute;
-	content: "";
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-	opacity: 0.60;
+.video button{
+	display: none;
 }
-
 
