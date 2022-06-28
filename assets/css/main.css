@@ -3221,8 +3221,6 @@ input, select, textarea {
 
 	.property::before{
 		background: url('images/Find\ Home.jpg') no-repeat center/cover;
-
-	
 	}
 
 	.sell::before{
@@ -3583,12 +3581,7 @@ input, select, textarea {
 div#bar.bar{
 	background: none;
 }
-#section3{
-	margin-top: -52rem;
-}
-#section4{
-	margin-top: -32rem;
-}
+
 
 	div.arrows{
 		flex-direction: row;
@@ -3715,9 +3708,6 @@ div#bar.bar{
 	align-items: center;
 }
 
-#videos img.source:hover,#videos a.video:hover, div.grid.flex a:hover{
-	opacity: 75%;
-}
 
 .video{
 	position: relative;
@@ -3736,6 +3726,27 @@ div#bar.bar{
 	color: white;
 }
 
+
+
+.video button{
+	display: none;
+}
+
+
 .video button:hover{
 	background-color: black;
 }
+
+
+
+.video button::before{
+	position: absolute;
+	content: "";
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.60;
+}
+
+

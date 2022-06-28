@@ -118,141 +118,159 @@
 
 
 
+const thumbText = document.querySelectorAll('.video')
 
 
-document.querySelector('.leftArrow1').addEventListener('click',goLeft)
-document.querySelector('.rightArrow1').addEventListener('click',goRight)
+Array.from(thumbText).forEach((element)=>{
+    element.addEventListener('mouseenter', showPlay)
+})
 
-document.querySelector('.leftArrow').addEventListener('click',goLeft)
-document.querySelector('.rightArrow').addEventListener('click',goRight)
+Array.from(thumbText).forEach((element)=>{
+    element.addEventListener('mouseleave', hidePlay)
+})
 
-let arr = []
+function showPlay(){
+	this.childNodes[0].style.display = 'flex'
+	console.log(this.childNodes[0])
+}
 
-for(let i = 1;i<10;i++){
-	let tabs = document.querySelector(`.vid${i}`)
-	arr.push(tabs)
+function hidePlay(){
+	this.childNodes[0].style.display = 'none'
 }
 
 
-let currentIndex = 0
-let currentIndex1 = 1
-let currentIndex2 = 2
-function goLeft(){
-	if(currentIndex === 0){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex = arr.length - 1
-		currentIndex1-=1
-		currentIndex2-=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
+// document.querySelector('.leftArrow1').addEventListener('click',goLeft)
+// document.querySelector('.rightArrow1').addEventListener('click',goRight)
+
+// document.querySelector('.leftArrow').addEventListener('click',goLeft)
+// document.querySelector('.rightArrow').addEventListener('click',goRight)
+
+// let arr = []
+
+// for(let i = 1;i<10;i++){
+// 	let tabs = document.querySelector(`.vid${i}`)
+// 	arr.push(tabs)
+// }
 
 
-	if(currentIndex1 === 0){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex -=1
-		currentIndex1 = arr.length -1
-		currentIndex2-=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
+// let currentIndex = 0
+// let currentIndex1 = 1
+// let currentIndex2 = 2
+// function goLeft(){
+// 	if(currentIndex === 0){
+// 		arr[currentIndex].classList.add('hidden')
+// 		arr[currentIndex1].classList.add('hidden')
+// 		arr[currentIndex2].classList.add('hidden')
+// 		currentIndex = arr.length - 1
+// 		currentIndex1-=1
+// 		currentIndex2-=1
+// 		arr[currentIndex].classList.remove('hidden')
+// 		arr[currentIndex1].classList.remove('hidden')
+// 		arr[currentIndex2].classList.remove('hidden')
+// 	}
 
 
-	if(currentIndex2 === 0){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex -=1
-		currentIndex1 -=1
-		currentIndex2 = arr.length -1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
-
-	if(currentIndex1 !== 0 && currentIndex !== 0 && currentIndex !== 0){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex -=1
-		currentIndex1 -=1
-		currentIndex2 -=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}		
-
-}
-
-function goRight(){
-
-	if(currentIndex === arr.length-1){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex = 0
-		currentIndex1+=1
-		currentIndex2+=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
-
-	if(currentIndex1 === arr.length-1){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex +=1
-		currentIndex1 = 0
-		currentIndex2+=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
+// 	if(currentIndex1 === 0){
+// 		arr[currentIndex].classList.add('hidden')
+// 		arr[currentIndex1].classList.add('hidden')
+// 		arr[currentIndex2].classList.add('hidden')
+// 		currentIndex -=1
+// 		currentIndex1 = arr.length -1
+// 		currentIndex2-=1
+// 		arr[currentIndex].classList.remove('hidden')
+// 		arr[currentIndex1].classList.remove('hidden')
+// 		arr[currentIndex2].classList.remove('hidden')
+// 	}
 
 
-	if(currentIndex2 === arr.length-1){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex +=1
-		currentIndex1 +=1
-		currentIndex2 = 0
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
+// 	if(currentIndex2 === 0){
+// 		arr[currentIndex].classList.add('hidden')
+// 		arr[currentIndex1].classList.add('hidden')
+// 		arr[currentIndex2].classList.add('hidden')
+// 		currentIndex -=1
+// 		currentIndex1 -=1
+// 		currentIndex2 = arr.length -1
+// 		arr[currentIndex].classList.remove('hidden')
+// 		arr[currentIndex1].classList.remove('hidden')
+// 		arr[currentIndex2].classList.remove('hidden')
+// 	}
 
-	if(currentIndex1 !== arr.length-1 && currentIndex !== arr.length-1 && currentIndex !== arr.length-1){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex +=1
-		currentIndex1 +=1
-		currentIndex2 +=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}		
-}
+// 	if(currentIndex1 !== 0 && currentIndex !== 0 && currentIndex !== 0){
+// 		arr[currentIndex].classList.add('hidden')
+// 		arr[currentIndex1].classList.add('hidden')
+// 		arr[currentIndex2].classList.add('hidden')
+// 		currentIndex -=1
+// 		currentIndex1 -=1
+// 		currentIndex2 -=1
+// 		arr[currentIndex].classList.remove('hidden')
+// 		arr[currentIndex1].classList.remove('hidden')
+// 		arr[currentIndex2].classList.remove('hidden')
+// 	}		
+
+// }
+
+// function goRight(){
+
+// 	if(currentIndex === arr.length-1){
+// 		arr[currentIndex].classList.add('hidden')
+// 		arr[currentIndex1].classList.add('hidden')
+// 		arr[currentIndex2].classList.add('hidden')
+// 		currentIndex = 0
+// 		currentIndex1+=1
+// 		currentIndex2+=1
+// 		arr[currentIndex].classList.remove('hidden')
+// 		arr[currentIndex1].classList.remove('hidden')
+// 		arr[currentIndex2].classList.remove('hidden')
+// 	}
+
+// 	if(currentIndex1 === arr.length-1){
+// 		arr[currentIndex].classList.add('hidden')
+// 		arr[currentIndex1].classList.add('hidden')
+// 		arr[currentIndex2].classList.add('hidden')
+// 		currentIndex +=1
+// 		currentIndex1 = 0
+// 		currentIndex2+=1
+// 		arr[currentIndex].classList.remove('hidden')
+// 		arr[currentIndex1].classList.remove('hidden')
+// 		arr[currentIndex2].classList.remove('hidden')
+// 	}
 
 
-document.querySelector('.listing').addEventListener('mouseover',viewButton)
-document.querySelector('.listing').addEventListener('mouseleave',hideButton)
+// 	if(currentIndex2 === arr.length-1){
+// 		arr[currentIndex].classList.add('hidden')
+// 		arr[currentIndex1].classList.add('hidden')
+// 		arr[currentIndex2].classList.add('hidden')
+// 		currentIndex +=1
+// 		currentIndex1 +=1
+// 		currentIndex2 = 0
+// 		arr[currentIndex].classList.remove('hidden')
+// 		arr[currentIndex1].classList.remove('hidden')
+// 		arr[currentIndex2].classList.remove('hidden')
+// 	}
 
-function viewButton(){
-	document.querySelector('#view').classList.remove('hidden')
-}
+// 	if(currentIndex1 !== arr.length-1 && currentIndex !== arr.length-1 && currentIndex !== arr.length-1){
+// 		arr[currentIndex].classList.add('hidden')
+// 		arr[currentIndex1].classList.add('hidden')
+// 		arr[currentIndex2].classList.add('hidden')
+// 		currentIndex +=1
+// 		currentIndex1 +=1
+// 		currentIndex2 +=1
+// 		arr[currentIndex].classList.remove('hidden')
+// 		arr[currentIndex1].classList.remove('hidden')
+// 		arr[currentIndex2].classList.remove('hidden')
+// 	}		
+// }
 
-function hideButton(){
-	document.querySelector('#view').classList.add('hidden')
 
-}
+// document.querySelector('.listing').addEventListener('mouseover',viewButton)
+// document.querySelector('.listing').addEventListener('mouseleave',hideButton)
 
+// function viewButton(){
+// 	document.querySelector('#view').classList.remove('hidden')
+// }
+
+// function hideButton(){
+// 	document.querySelector('#view').classList.add('hidden')
+
+// }
 
