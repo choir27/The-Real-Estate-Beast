@@ -3490,7 +3490,7 @@ input, select, textarea {
 	display: none;
 }
 
-#main section#banner img, footer#footer{
+#main section#banner img{
 	position: relative;
 	z-index: 0;
 }
@@ -3515,9 +3515,9 @@ input, select, textarea {
 
 
 @media all and (max-width: 980px) {
-	#header{
+	header#header{
 		width: 100%;
-		height: 70%;
+		height: 62vh;
 	}
 	nav.flex.nav{
 		justify-content: center;
@@ -3526,12 +3526,20 @@ input, select, textarea {
 	
 }
 
-@media all and (min-width: 300px) and (max-width: 740px) {
-	#header{
-		width: 100%;
-		height: 60%;
+ 
+@media all and (min-width: 980px)and (max-width: 1120px) {
+	header#header{
+		width: 33%;
 	}
+	
+}
 
+
+@media all and (min-width: 300px) and (max-width: 740px) {
+	header#header{
+		width: 100%;
+		height: 62vh;
+	}
 }
 
 @media all and (min-width: 1205px) and (max-width: 1445px) {
@@ -3667,8 +3675,9 @@ div#bar.bar{
 	height: 66vh;
 	}
 	header#header{
-		height: 70vh;
 		position: relative;
+		width: 100%;
+		height: 62vh;
 	}
 	
 	.arrows{
@@ -3695,8 +3704,15 @@ div#bar.bar{
 		font-size: 2rem;
 	}
 	
-	header#header{
+	/* header#header{
 		height: 110vh;
 	
+	} */
 	}
-	}
+
+.icons{
+	justify-content: space-around;
+	align-items: center;
+}
+
+
