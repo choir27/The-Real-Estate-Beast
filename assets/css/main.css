@@ -3531,6 +3531,10 @@ input, select, textarea {
 	}
 	
 }
+ @media all and (min-width: 180px)and (max-width: 1220px) {
+#videos #leftArrow,#videos #rightArrow{
+	display: none;
+ }
 
 
 @media all and (min-width: 300px) and (max-width: 740px) {
@@ -3560,6 +3564,7 @@ input, select, textarea {
 
 
 @media all and (min-width: 700px) and (max-width: 1205px) {
+
 	div#bar.bar{
 		background: white;
 		padding: 2rem;
@@ -3589,9 +3594,7 @@ div#bar.bar{
 		justify-content: space-around;
 	}
 
-	#leftArrow,#rightArrow{
-		display: none;
-	}
+
 
 	#videos a img{
 		width: 100%;
@@ -3662,46 +3665,11 @@ div#bar.bar{
 }
 
 
-@media all and (orientation: landscape) and (min-width:100px) and (max-width:800px)	{
+@media all and (min-width:100px) and (max-width:680px)	{
 	#videos a img{
-	width: 120%;
-	height: 66vh;
+		height: 50vh;
 	}
-	header#header{
-		position: relative;
-		width: 100%;
-		height: 62vh;
-	}
-	
-	.arrows{
-		margin-top: -4rem;
-	}
-	
-	.leftArrow,.rightArrow{
-	display: flex;
-	width: 20%;
-	}
-	
-	div#bar.bar{
-		background: none;
-		padding: 0rem;
-		height: 100%;
-		margin-top: 2rem;
-		position: fixed;
-		z-index: 1;
-		margin-bottom: 8.5rem;
-	
-	}
-	
-	div#bar.bar a{
-		font-size: 2rem;
-	}
-	
-	/* header#header{
-		height: 110vh;
-	
-	} */
-	}
+ }
 
 .icons{
 	justify-content: space-around;
