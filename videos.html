@@ -105,25 +105,87 @@
 						<p>I take customer service very seriously and will respond within a few hours or less. Your satisfaction is  my top priority and I look forward to being able to help you in any way I can. Feel free to ask me anything by phone, text or email. Talk soon!</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form name = 'Contact-Videos' netlify method="post" action="#" netlify-honeypot="bot-field"
-	data-netlify="true">
-
-	<p class="hidden">
-		<label>
-		Don’t fill this out if you’re human: <input name="bot-field" />
-		</label>
-	</p>
+								<form name = 'Contact-General' netlify method="post" action="#" netlify-honeypot="bot-field"
+								data-netlify="true">
+							
+								<p class="hidden">
+									<label>
+									Don’t fill this out if you’re human: <input name="bot-field" />
+									</label>
+								</p>
 									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="firstName" placeholder="First Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="lastName" placeholder="Last Name" /></div>
+										<div class="col-6 col-12">
+										<select name="subject" required = 'required'>
+											<option value="General">General</option>
+											<option value="Real-Estate">Real-Estate</option>
+											<option value="Sales">Sales</option>
+										  </select>	
+										</div>									
+										<div class="col-6 col-12"><input type="email" name="email" id="email" placeholder="Email" /></div>
+                                        <div class="col-6 col-12-xsmall"><input type="tel" id="phoneNumber" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></div>
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class = 'sendMessage' /></li>
+										<li><input type="submit" value="Send Message" class ='sendMessage'/></li>
 									</ul>
 								</form>
 
+
+								<form name = 'Contact-Sales' netlify method="post" action="#" netlify-honeypot="bot-field"
+								data-netlify="true" class = 'hidden'>
+							
+								<p class="hidden">
+									<label>
+									Don’t fill this out if you’re human: <input name="bot-field" />
+									</label>
+								</p>
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="firstName" placeholder="First Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="lastName" placeholder="Last Name" /></div>
+										<div class="col-6 col-12">
+										<select name="subject" required = 'required'>
+											<option value="General">General</option>
+											<option value="Real-Estate">Real-Estate</option>
+											<option value="Sales">Sales</option>
+										  </select>	
+										</div>									
+										<div class="col-6 col-12"><input type="email" name="email" id="email" placeholder="Email" /></div>
+                                        <div class="col-6 col-12-xsmall"><input type="tel" id="phoneNumber" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class ='sendMessage'/></li>
+									</ul>
+								</form>
+
+								<form name = 'Contact-Real-Estate' netlify method="post" action="#" netlify-honeypot="bot-field"
+								data-netlify="true" class = 'hidden'>
+							
+								<p class="hidden">
+									<label>
+									Don’t fill this out if you’re human: <input name="bot-field" />
+									</label>
+								</p>
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="firstName" placeholder="First Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="lastName" placeholder="Last Name" /></div>
+										<div class="col-6 col-12">
+										<select name="subject" required = 'required'>
+											<option value="General">General</option>
+											<option value="Real-Estate">Real-Estate</option>
+											<option value="Sales">Sales</option>
+										  </select>	
+										</div>									
+										<div class="col-6 col-12"><input type="email" name="email" id="email" placeholder="Email" /></div>
+                                        <div class="col-6 col-12-xsmall"><input type="tel" id="phoneNumber" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class ='sendMessage'/></li>
+									</ul>
+								</form>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
