@@ -131,7 +131,6 @@ Array.from(thumbText).forEach((element)=>{
 
 function showPlay(){
 	this.childNodes[0].style.display = 'flex'
-	console.log(this.childNodes[0])
 }
 
 function hidePlay(){
