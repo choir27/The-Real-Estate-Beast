@@ -3723,3 +3723,6 @@ div#bar.bar{
 	display: none;
 }
 
+.bold{
+	font-weight: bolder;
+}
