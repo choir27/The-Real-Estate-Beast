@@ -141,8 +141,7 @@ function hidePlay(){
 document.querySelector('.leftArrow1').addEventListener('click',goLeft)
 document.querySelector('.rightArrow1').addEventListener('click',goRight)
 
-document.querySelector('.leftArrow').addEventListener('click',goLeft)
-document.querySelector('.rightArrow').addEventListener('click',goRight)
+
 
 let arr = []
 
