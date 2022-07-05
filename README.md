@@ -2,7 +2,7 @@
 
 The Real Estate Beast Website focuses on the services provided by the Real Estate Agent Carleton M. Badger, showcasing their past client testimonials and their house listings.  Clients are able to find the estimated value of their house, find an available house in particular locations, and contact Carleton for his services and/or questions.
 
-https://therealestatebeast.netlify.app/ 
+<div align = 'center'><a href = 'https://therealestatebeast.netlify.app/'>View the website here!</a></div>
 <img src ='images/preview.gif'>
 
 
