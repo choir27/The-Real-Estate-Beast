@@ -15,6 +15,6 @@ I built the foundations of the HTML code using semantically correct code, Flexbo
 ## Lessons Learned:
 In order to make the form subject function the way that it currently does, I needed to go research and find the javascript code that would help.  After finding the code that I was looking for, I was able to discover a new method of using both the DOM and JS code while using syntax that I was already familiar with.  This reinforced the lesson that there is always something new that can be accomplished with code and there is always more to learn about it.
 <!--
-## Lessons Learned: No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those whoa this is awesome or fuck yeah I did it! moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing. 
+
 ## Examples: Take a look at these couple examples that I have in my own portfolio: Palettable: YOUR LINK HERE Twitter Battle: YOUR LINK HERE Patch Panel: YOUR LINK HERE
 -->
