@@ -3521,8 +3521,11 @@ input, select, textarea {
 		justify-content: center;
 		align-items: center;
 	}
-	
+
 }
+
+
+
 
  
 @media all and (min-width: 980px)and (max-width: 1120px) {
@@ -3651,6 +3654,10 @@ div#bar.bar{
 /*******************************************/
 
 @media (min-width:100px) and (max-width:1200px)	{
+	#videoSite #three{
+		width: 80%;
+	}
+
 	div#bar{
 		background: none;
 		height: 100%;
@@ -3725,4 +3732,11 @@ div#bar.bar{
 
 .bold{
 	font-weight: bolder;
+}
+
+
+@media all and (min-width: 100px) and (max-width: 970px){
+	#videoSite #three{
+		width: 100%;
+	}
 }
