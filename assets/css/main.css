@@ -3740,3 +3740,25 @@ div#bar.bar{
 		width: 100%;
 	}
 }
+
+
+.small{
+width: 20%;
+}
+
+.medium{
+width: 40%;
+}
+
+.large{
+width: 60%;
+}
+
+.videoRow .image{
+	margin: 2rem;
+}
+
+.audio{
+	justify-content: center;
+	margin: 3rem;
+}
