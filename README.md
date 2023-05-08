@@ -4,7 +4,12 @@ The Real Estate Beast Website focuses on the services provided by the Real Estat
 
 <div align = 'center'><a href = 'https://therealestatebeast.netlify.app/'>View the website here!</a></div>
 </br>
-<div align = 'center'><img src ='images/preview.gif'></div>
+<div align = 'center'>
+
+<img width="944" alt="Screenshot 2023-05-08 140732" src="https://user-images.githubusercontent.com/66279068/236898633-a7bdad11-45b9-42a7-a54c-5c0fef927833.png">
+
+
+</div>
 
 
 ## How It's Made: Tech used: HTML, CSS, JavaScript
