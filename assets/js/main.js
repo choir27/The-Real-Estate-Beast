@@ -1,290 +1,268 @@
-
 // 	Strata by HTML5 UP
 // 	html5up.net | @ajlkn
 // 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 // */
 
-(function($) {
+(function ($) {
+  var $window = $(window),
+    $body = $("body"),
+    $header = $("#header"),
+    $footer = $("#footer"),
+    $main = $("#main"),
+    settings = {
+      // Parallax background effect?
+      parallax: true,
 
-	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$footer = $('#footer'),
-		$main = $('#main'),
-		settings = {
+      // Parallax factor (lower = more intense, higher = less intense).
+      parallaxFactor: 20,
+    };
 
-			// Parallax background effect?
-				parallax: true,
+  // Breakpoints.
+  breakpoints({
+    xlarge: ["1281px", "1800px"],
+    large: ["981px", "1280px"],
+    medium: ["737px", "980px"],
+    small: ["481px", "736px"],
+    xsmall: [null, "480px"],
+  });
 
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 20
+  // Play initial animations on page load.
+  $window.on("load", function () {
+    window.setTimeout(function () {
+      $body.removeClass("is-preload");
+    }, 100);
+  });
 
-		};
+  // Touch?
+  if (browser.mobile) {
+    // Turn on touch mode.
+    $body.addClass("is-touch");
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1800px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ],
-		});
+    // Height fix (mostly for iOS).
+    window.setTimeout(function () {
+      $window.scrollTop($window.scrollTop() + 1);
+    }, 0);
+  }
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  // Footer.
+  breakpoints.on("<=medium", function () {
+    $footer.insertAfter($main);
+  });
 
-	// Touch?
-		if (browser.mobile) {
+  breakpoints.on(">medium", function () {
+    $footer.appendTo($header);
+  });
 
-			// Turn on touch mode.
-				$body.addClass('is-touch');
+  // Header.
 
-			// Height fix (mostly for iOS).
-				window.setTimeout(function() {
-					$window.scrollTop($window.scrollTop() + 1);
-				}, 0);
+  // Parallax background.
 
-		}
+  // Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
+  if (browser.name == "ie" || browser.mobile) settings.parallax = false;
 
-	// Footer.
-		breakpoints.on('<=medium', function() {
-			$footer.insertAfter($main);
-		});
+  if (settings.parallax) {
+    breakpoints.on("<=medium", function () {
+      $window.off("scroll.strata_parallax");
+      $header.css("background-position", "");
+    });
 
-		breakpoints.on('>medium', function() {
-			$footer.appendTo($header);
-		});
+    breakpoints.on(">medium", function () {
+      $header.css("background-position", "left 0px");
 
-	// Header.
+      $window.on("scroll.strata_parallax", function () {
+        $header.css(
+          "background-position",
+          "left " +
+            -1 * (parseInt($window.scrollTop()) / settings.parallaxFactor) +
+            "px",
+        );
+      });
+    });
 
-		// Parallax background.
+    $window.on("load", function () {
+      $window.triggerHandler("scroll");
+    });
+  }
 
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (browser.name == 'ie'
-				||	browser.mobile)
-					settings.parallax = false;
+  // Main Sections: Two.
 
-			if (settings.parallax) {
-
-				breakpoints.on('<=medium', function() {
-
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
-
-				});
-
-				breakpoints.on('>medium', function() {
-
-					$header.css('background-position', 'left 0px');
-
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
-
-				});
-
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
-
-			}
-
-	// Main Sections: Two.
-
-		// Lightbox gallery.
-			$window.on('load', function() {
-
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
-			});
-
+  // Lightbox gallery.
+  $window.on("load", function () {
+    $("#two").poptrox({
+      caption: function ($a) {
+        return $a.next("h3").text();
+      },
+      overlayColor: "#2c2c2c",
+      overlayOpacity: 0.85,
+      popupCloserText: "",
+      popupLoaderText: "",
+      selector: ".work-item a.image",
+      usePopupCaption: true,
+      usePopupDefaultStyling: false,
+      usePopupEasyClose: false,
+      usePopupNav: true,
+      windowMargin: breakpoints.active("<=small") ? 0 : 50,
+    });
+  });
 })(jQuery);
 
+const thumbText = document.querySelectorAll(".video");
 
+Array.from(thumbText).forEach((element) => {
+  element.addEventListener("mouseenter", showPlay);
+});
 
-const thumbText = document.querySelectorAll('.video')
+Array.from(thumbText).forEach((element) => {
+  element.addEventListener("mouseleave", hidePlay);
+});
 
-
-Array.from(thumbText).forEach((element)=>{
-    element.addEventListener('mouseenter', showPlay)
-})
-
-Array.from(thumbText).forEach((element)=>{
-    element.addEventListener('mouseleave', hidePlay)
-})
-
-function showPlay(){
-	this.childNodes[0].style.display = 'flex'
+function showPlay() {
+  this.childNodes[0].style.display = "flex";
 }
 
-function hidePlay(){
-	this.childNodes[0].style.display = 'none'
+function hidePlay() {
+  this.childNodes[0].style.display = "none";
 }
 
+document.querySelector(".leftArrow1").addEventListener("click", goLeft);
+document.querySelector(".rightArrow1").addEventListener("click", goRight);
 
-document.querySelector('.leftArrow1').addEventListener('click',goLeft)
-document.querySelector('.rightArrow1').addEventListener('click',goRight)
+let arr = [];
 
-
-
-let arr = []
-
-for(let i = 1;i<10;i++){
-	let tabs = document.querySelector(`.vid${i}`)
-	arr.push(tabs)
+for (let i = 1; i < 10; i++) {
+  let tabs = document.querySelector(`.vid${i}`);
+  arr.push(tabs);
 }
 
+let currentIndex = 0;
+let currentIndex1 = 1;
+let currentIndex2 = 2;
+function goLeft() {
+  if (currentIndex === 0) {
+    arr[currentIndex].classList.add("hidden");
+    arr[currentIndex1].classList.add("hidden");
+    arr[currentIndex2].classList.add("hidden");
+    currentIndex = arr.length - 1;
+    currentIndex1 -= 1;
+    currentIndex2 -= 1;
+    arr[currentIndex].classList.remove("hidden");
+    arr[currentIndex1].classList.remove("hidden");
+    arr[currentIndex2].classList.remove("hidden");
+  }
 
-let currentIndex = 0
-let currentIndex1 = 1
-let currentIndex2 = 2
-function goLeft(){
-	if(currentIndex === 0){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex = arr.length - 1
-		currentIndex1-=1
-		currentIndex2-=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
+  if (currentIndex1 === 0) {
+    arr[currentIndex].classList.add("hidden");
+    arr[currentIndex1].classList.add("hidden");
+    arr[currentIndex2].classList.add("hidden");
+    currentIndex -= 1;
+    currentIndex1 = arr.length - 1;
+    currentIndex2 -= 1;
+    arr[currentIndex].classList.remove("hidden");
+    arr[currentIndex1].classList.remove("hidden");
+    arr[currentIndex2].classList.remove("hidden");
+  }
 
+  if (currentIndex2 === 0) {
+    arr[currentIndex].classList.add("hidden");
+    arr[currentIndex1].classList.add("hidden");
+    arr[currentIndex2].classList.add("hidden");
+    currentIndex -= 1;
+    currentIndex1 -= 1;
+    currentIndex2 = arr.length - 1;
+    arr[currentIndex].classList.remove("hidden");
+    arr[currentIndex1].classList.remove("hidden");
+    arr[currentIndex2].classList.remove("hidden");
+  }
 
-	if(currentIndex1 === 0){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex -=1
-		currentIndex1 = arr.length -1
-		currentIndex2-=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
-
-
-	if(currentIndex2 === 0){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex -=1
-		currentIndex1 -=1
-		currentIndex2 = arr.length -1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
-
-	if(currentIndex1 !== 0 && currentIndex !== 0 && currentIndex !== 0){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex -=1
-		currentIndex1 -=1
-		currentIndex2 -=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}		
-
+  if (currentIndex1 !== 0 && currentIndex !== 0 && currentIndex !== 0) {
+    arr[currentIndex].classList.add("hidden");
+    arr[currentIndex1].classList.add("hidden");
+    arr[currentIndex2].classList.add("hidden");
+    currentIndex -= 1;
+    currentIndex1 -= 1;
+    currentIndex2 -= 1;
+    arr[currentIndex].classList.remove("hidden");
+    arr[currentIndex1].classList.remove("hidden");
+    arr[currentIndex2].classList.remove("hidden");
+  }
 }
 
-function goRight(){
+function goRight() {
+  if (currentIndex === arr.length - 1) {
+    arr[currentIndex].classList.add("hidden");
+    arr[currentIndex1].classList.add("hidden");
+    arr[currentIndex2].classList.add("hidden");
+    currentIndex = 0;
+    currentIndex1 += 1;
+    currentIndex2 += 1;
+    arr[currentIndex].classList.remove("hidden");
+    arr[currentIndex1].classList.remove("hidden");
+    arr[currentIndex2].classList.remove("hidden");
+  }
 
-	if(currentIndex === arr.length-1){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex = 0
-		currentIndex1+=1
-		currentIndex2+=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
+  if (currentIndex1 === arr.length - 1) {
+    arr[currentIndex].classList.add("hidden");
+    arr[currentIndex1].classList.add("hidden");
+    arr[currentIndex2].classList.add("hidden");
+    currentIndex += 1;
+    currentIndex1 = 0;
+    currentIndex2 += 1;
+    arr[currentIndex].classList.remove("hidden");
+    arr[currentIndex1].classList.remove("hidden");
+    arr[currentIndex2].classList.remove("hidden");
+  }
 
-	if(currentIndex1 === arr.length-1){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex +=1
-		currentIndex1 = 0
-		currentIndex2+=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
+  if (currentIndex2 === arr.length - 1) {
+    arr[currentIndex].classList.add("hidden");
+    arr[currentIndex1].classList.add("hidden");
+    arr[currentIndex2].classList.add("hidden");
+    currentIndex += 1;
+    currentIndex1 += 1;
+    currentIndex2 = 0;
+    arr[currentIndex].classList.remove("hidden");
+    arr[currentIndex1].classList.remove("hidden");
+    arr[currentIndex2].classList.remove("hidden");
+  }
 
-
-	if(currentIndex2 === arr.length-1){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex +=1
-		currentIndex1 +=1
-		currentIndex2 = 0
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}
-
-	if(currentIndex1 !== arr.length-1 && currentIndex !== arr.length-1 && currentIndex !== arr.length-1){
-		arr[currentIndex].classList.add('hidden')
-		arr[currentIndex1].classList.add('hidden')
-		arr[currentIndex2].classList.add('hidden')
-		currentIndex +=1
-		currentIndex1 +=1
-		currentIndex2 +=1
-		arr[currentIndex].classList.remove('hidden')
-		arr[currentIndex1].classList.remove('hidden')
-		arr[currentIndex2].classList.remove('hidden')
-	}		
+  if (
+    currentIndex1 !== arr.length - 1 &&
+    currentIndex !== arr.length - 1 &&
+    currentIndex !== arr.length - 1
+  ) {
+    arr[currentIndex].classList.add("hidden");
+    arr[currentIndex1].classList.add("hidden");
+    arr[currentIndex2].classList.add("hidden");
+    currentIndex += 1;
+    currentIndex1 += 1;
+    currentIndex2 += 1;
+    arr[currentIndex].classList.remove("hidden");
+    arr[currentIndex1].classList.remove("hidden");
+    arr[currentIndex2].classList.remove("hidden");
+  }
 }
 
+document.querySelector(".listing").addEventListener("mouseover", viewButton);
+document.querySelector(".listing").addEventListener("mouseleave", hideButton);
 
-document.querySelector('.listing').addEventListener('mouseover',viewButton)
-document.querySelector('.listing').addEventListener('mouseleave',hideButton)
-
-function viewButton(){
-	document.querySelector('#view').classList.remove('hidden')
+function viewButton() {
+  document.querySelector("#view").classList.remove("hidden");
 }
 
-function hideButton(){
-	document.querySelector('#view').classList.add('hidden')
-
+function hideButton() {
+  document.querySelector("#view").classList.add("hidden");
 }
-
-
 
 function changeFormName(event) {
-	// The value of the subject field.
-	let value = event.target.value;
-	// The name we want to apply to the form, based on the value.
-	let name = "Contact-" + value;
-	// The form element in the DOM.
-	let form = document.querySelector("#conditional-form");
-	// Apply the new name to the form's [name] attribute.
-	if (form) form.setAttribute("name", name);
-	// The [name="form-name] field in the DOM.
-	let formName = document.querySelector('#conditional-form [name="form-name"]');
-	// Apply the new name to the [name="form-name"] field within the form.
-	if (formName) formName.setAttribute("value", name);
-  }
+  // The value of the subject field.
+  let value = event.target.value;
+  // The name we want to apply to the form, based on the value.
+  let name = "Contact-" + value;
+  // The form element in the DOM.
+  let form = document.querySelector("#conditional-form");
+  // Apply the new name to the form's [name] attribute.
+  if (form) form.setAttribute("name", name);
+  // The [name="form-name] field in the DOM.
+  let formName = document.querySelector('#conditional-form [name="form-name"]');
+  // Apply the new name to the [name="form-name"] field within the form.
+  if (formName) formName.setAttribute("value", name);
+}

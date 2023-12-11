@@ -1,178 +1,383 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-	<head>
-		<title>The Real Estate Beast</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>The Real Estate Beast</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <div class="inner">
+        <a target="_blank" href="images/avatar.jpg" class="image avatar"
+          ><img
+            src="images/avatar.jpg"
+            alt="profile picture of Carleton Badger"
+        /></a>
+        <h1>Welcome to Carleton Badger, The Real Estate BEaST!</h1>
+        <nav class="flex nav">
+          <a href="index.html">Home</a>
+          <a
+            target="_blank"
+            href="https://www.brightmlshomes.com/carleton-badger/tools/marketvalue.aspx?address=&propertyId="
+            >Find Value</a
+          >
+          <a target="_blank" href="https://cbadger.kw.com/">Find House</a>
+          <a
+            target="_blank"
+            href="https://www.brightmlshomes.com/carleton-badger/listing/listingsearchresultsonly.aspx?Search=1a26aa90-fefc-4449-b76f-25220dbfb6ad&SearchType=AgentHome&InternalAgentCd=&OfficeCds=&AgentHomePageSearchType=AllMyListings&ListingType=&ListingDistrictTypeID=&PriorSales=&Sort=6"
+            >My Listings</a
+          >
+        </nav>
+      </div>
+    </header>
 
-		<!-- Header -->
-		<header id="header">
-			<div class="inner">
-				<a target = '_blank' href="images/avatar.jpg" class="image avatar"><img src="images/avatar.jpg" alt="profile picture of Carleton Badger" /></a>
-				<h1>Welcome to Carleton Badger, The Real Estate BEaST!</h1>
-				<nav class = 'flex nav'>
-				<a href = 'index.html'>Home</a>
-				<a target = '_blank' href="https://www.brightmlshomes.com/carleton-badger/tools/marketvalue.aspx?address=&propertyId=">Find Value</a>
-				<a target = '_blank' href = 'https://cbadger.kw.com/'>Find House</a>
-				<a target = '_blank' href = 'https://www.brightmlshomes.com/carleton-badger/listing/listingsearchresultsonly.aspx?Search=1a26aa90-fefc-4449-b76f-25220dbfb6ad&SearchType=AgentHome&InternalAgentCd=&OfficeCds=&AgentHomePageSearchType=AllMyListings&ListingType=&ListingDistrictTypeID=&PriorSales=&Sort=6'>My Listings</a>
-				</nav>
-			</div>
-		</header>
+    <!-- Main -->
+    <div id="main">
+      <section>
+        <a target="_blank" href="images/banner.jpg" class="image fit thumb"
+          ><img src="images/banner.jpg" alt="The Real Estate Beast Banner"
+        /></a>
+      </section>
+      <h1 class="center flex">Get in touch with The Real Estate BEaST!</h1>
+      <p>
+        I take customer service very seriously and will respond within a few
+        hours or less. Your satisfaction is my top priority and I look forward
+        to being able to help you in any way I can. Feel free to ask me anything
+        by phone, text or email. Talk soon!
+      </p>
 
-		<!-- Main -->
-			<div id="main">
-				<section>
-					<a target = '_blank' href="images/banner.jpg" class="image fit thumb"><img src="images/banner.jpg" alt="The Real Estate Beast Banner" /></a>
-				</section>
-    <h1 class = 'center flex'>Get in touch with The Real Estate BEaST!</h1>
-    <p>I take customer service very seriously and will respond within a few hours or less. Your satisfaction is my top priority and I look forward to being able to help you in any way I can. Feel free to ask me anything by phone, text or email. Talk soon!</p>
+      <!-- Three -->
+      <section id="three">
+        <div class="row">
+          <div class="col-8 col-12-small">
+            <form
+              name="Contact-General"
+              netlify
+              method="post"
+              action="#"
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+            >
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human:
+                  <input name="bot-field" />
+                </label>
+              </p>
+              <div class="row gtr-uniform gtr-50">
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="text"
+                    name="name"
+                    id="firstName"
+                    placeholder="First Name"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="text"
+                    name="name"
+                    id="lastName"
+                    placeholder="Last Name"
+                  />
+                </div>
+                <div class="col-6 col-12">
+                  <select name="subject" required="required">
+                    <option value="General">General</option>
+                    <option value="Real-Estate">Real-Estate</option>
+                    <option value="Sales">Sales</option>
+                  </select>
+                </div>
+                <div class="col-6 col-12">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    name="phone"
+                    placeholder="123-456-7890"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                    rows="4"
+                  ></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li>
+                  <input
+                    type="submit"
+                    value="Send Message"
+                    class="sendMessage"
+                  />
+                </li>
+              </ul>
+            </form>
 
-	
-				<!-- Three -->
-					<section id="three">
-                    
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form name = 'Contact-General' netlify method="post" action="#" netlify-honeypot="bot-field"
-								data-netlify="true">
-							
-								<p class="hidden">
-									<label>
-									Don’t fill this out if you’re human: <input name="bot-field" />
-									</label>
-								</p>
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="firstName" placeholder="First Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="lastName" placeholder="Last Name" /></div>
-										<div class="col-6 col-12">
-										<select name="subject" required = 'required'>
-											<option value="General">General</option>
-											<option value="Real-Estate">Real-Estate</option>
-											<option value="Sales">Sales</option>
-										  </select>	
-										</div>									
-										<div class="col-6 col-12"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                                        <div class="col-6 col-12-xsmall"><input type="tel" id="phoneNumber" name="phone"  placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class ='sendMessage'/></li>
-									</ul>
-								</form>
+            <form
+              name="Contact-Sales"
+              netlify
+              method="post"
+              action="#"
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+              class="hidden"
+            >
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human:
+                  <input name="bot-field" />
+                </label>
+              </p>
+              <div class="row gtr-uniform gtr-50">
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="text"
+                    name="name"
+                    id="firstName"
+                    placeholder="First Name"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="text"
+                    name="name"
+                    id="lastName"
+                    placeholder="Last Name"
+                  />
+                </div>
+                <div class="col-6 col-12">
+                  <select name="subject" required="required">
+                    <option value="General">General</option>
+                    <option value="Real-Estate">Real-Estate</option>
+                    <option value="Sales">Sales</option>
+                  </select>
+                </div>
+                <div class="col-6 col-12">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    name="phone"
+                    placeholder="123-456-7890"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                    rows="4"
+                  ></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li>
+                  <input
+                    type="submit"
+                    value="Send Message"
+                    class="sendMessage"
+                  />
+                </li>
+              </ul>
+            </form>
 
+            <form
+              name="Contact-Real-Estate"
+              netlify
+              method="post"
+              action="#"
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+              class="hidden"
+            >
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human:
+                  <input name="bot-field" />
+                </label>
+              </p>
+              <div class="row gtr-uniform gtr-50">
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="text"
+                    name="name"
+                    id="firstName"
+                    placeholder="First Name"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="text"
+                    name="name"
+                    id="lastName"
+                    placeholder="Last Name"
+                  />
+                </div>
+                <div class="col-6 col-12">
+                  <select name="subject" required="required">
+                    <option value="General">General</option>
+                    <option value="Real-Estate">Real-Estate</option>
+                    <option value="Sales">Sales</option>
+                  </select>
+                </div>
+                <div class="col-6 col-12">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    name="phone"
+                    placeholder="123-456-7890"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                    rows="4"
+                  ></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li>
+                  <input
+                    type="submit"
+                    value="Send Message"
+                    class="sendMessage"
+                  />
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div class="col-4 col-12-small">
+            <ul class="labeled-icons">
+              <li>
+                <h3 class="icon solid fa-home">
+                  <span class="label">Address</span>
+                </h3>
+                eXp Realty 28 Valley Road, Suite #1, Montclair,NJ 07042
+              </li>
+              <li>
+                <h3 class="icon solid fa-mobile-alt">
+                  <span class="label">Phone</span>
+                </h3>
+                (609)-421-5594 Home Office
+              </li>
+              <li>
+                <h3 class="icon solid fa-mobile-alt">
+                  <span class="label">Phone</span>
+                </h3>
+                (609)-421-5594 Mobile
+              </li>
+              <li>
+                <h3 class="icon solid fa-mobile-alt">
+                  <span class="label">Phone</span>
+                </h3>
+                (866)-201-6210 Office
+              </li>
+              <li>
+                <h3 class="icon solid fa-envelope">
+                  <span class="label">Email</span>
+                </h3>
+                <a href="#">cb@carletonbadger.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
 
-								<form name = 'Contact-Sales' netlify method="post" action="#" netlify-honeypot="bot-field"
-								data-netlify="true" class = 'hidden'>
-							
-								<p class="hidden">
-									<label>
-									Don’t fill this out if you’re human: <input name="bot-field" />
-									</label>
-								</p>
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="firstName" placeholder="First Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="lastName" placeholder="Last Name" /></div>
-										<div class="col-6 col-12">
-										<select name="subject" required = 'required'>
-											<option value="General">General</option>
-											<option value="Real-Estate">Real-Estate</option>
-											<option value="Sales">Sales</option>
-										  </select>	
-										</div>									
-										<div class="col-6 col-12"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                                        <div class="col-6 col-12-xsmall"><input type="tel" id="phoneNumber" name="phone"  placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class ='sendMessage'/></li>
-									</ul>
-								</form>
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons flex row">
+          <li>
+            <a
+              target="_blank"
+              href="https://twitter.com/R_EstateBEAST"
+              class="icon brands fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/CarletonMBadgerGRI/"
+              class="icon brands fa-facebook-f"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/cmbadger77/?hl=en"
+              class="icon brands fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="contact.html"
+              class="icon solid fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Choir</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </footer>
 
-								<form name = 'Contact-Real-Estate' netlify method="post" action="#" netlify-honeypot="bot-field"
-								data-netlify="true" class = 'hidden'>
-							
-								<p class="hidden">
-									<label>
-									Don’t fill this out if you’re human: <input name="bot-field" />
-									</label>
-								</p>
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="firstName" placeholder="First Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="lastName" placeholder="Last Name" /></div>
-										<div class="col-6 col-12">
-										<select name="subject" required = 'required'>
-											<option value="General">General</option>
-											<option value="Real-Estate">Real-Estate</option>
-											<option value="Sales">Sales</option>
-										  </select>	
-										</div>									
-										<div class="col-6 col-12"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                                        <div class="col-6 col-12-xsmall"><input type="tel" id="phoneNumber" name="phone"  placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class ='sendMessage'/></li>
-									</ul>
-								</form>
-
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										eXp Realty 28 Valley Road, Suite #1, Montclair,NJ  07042
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										(609)-421-5594 Home Office
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										(609)-421-5594 Mobile
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										 (866)-201-6210 Office
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">cb@carletonbadger.com</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-		
-			</div>
-
-		<!-- Footer -->
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons flex row">
-						<li><a target = '_blank' href="https://twitter.com/R_EstateBEAST" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a target = '_blank' href="https://www.facebook.com/CarletonMBadgerGRI/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a target = '_blank' href="https://www.instagram.com/cmbadger77/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a target = '_blank' href="contact.html" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Choir</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-		<script src="https://kit.fontawesome.com/d0e0071c1c.js" crossorigin="anonymous"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Scripts -->
+    <script
+      src="https://kit.fontawesome.com/d0e0071c1c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

@@ -1,1 +1,6 @@
 Video\ Assets
+package.json
+node_modules
+.prettierrc
+.prettierignore
+package-lock.json
